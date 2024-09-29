@@ -25,7 +25,7 @@ public class PublicationService {
 
     public Publication save(Publication publication , MultipartFile photo) throws Exception {
 
-         //image
+        //image
          if (photo != null) {
             String location = "C:\\xampp\\htdocs\\photo";
             try {

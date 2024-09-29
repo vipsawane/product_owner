@@ -108,8 +108,9 @@ public class RessourceService {
     }
 
     // Méthode pour afficher les ressources par id
-    public Optional<Ressource> findById(Long id) {
-        return ressourceRepository.findById(id);
+    public Ressource findById(Long id) {
+        Ressource re = ressourceRepository.findById(id).orElseThrow(() -> new IllegalStateException("Aucune publication trouvé"));
+        return re;
     }
 
     public Ressource updateLike(Long id) throws Exception {
